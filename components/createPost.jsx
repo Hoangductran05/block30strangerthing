@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import Base_Api from '../APIconfig';
 
 const NewPostForm = () => {
   const [postData, setPostData] = useState({
@@ -17,11 +18,22 @@ const NewPostForm = () => {
     setPostData({ ...postData, [name]: value });
   };
 
-  const createPost = () => {
-    // Use the postData to create a new post
-    console.log('Creating post:', postData);
-    // You can send the postData to your server or perform any other actions here
-  };
+  const createPost = async () => {
+    fetch(`${Base_Api}/posts`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Post created:', data);
+          // Optionally, you can update your UI or perform other actions upon successful post creation
+        })
+        .catch(error => console.error('Error creating post:', error));
+    };
+  
 
   return (
     <div>
