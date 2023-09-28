@@ -1,7 +1,7 @@
 import PostsList from "../components/allposts";
 import NewPostForm from "../components/createPost";
 import { useState } from "react";
-import DeletePost from "../components/deletePost";
+
 
 export default function Post() {
   const [showForm, setShowForm] = useState(false);
@@ -23,7 +23,7 @@ export default function Post() {
         {showForm && <NewPostForm />}
       </div>
       <PostsList  />
-      <DeletePost />
+     
     </div>
   </>
   )

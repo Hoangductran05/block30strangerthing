@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Base_Api from '../APIconfig';
 import Postcard from './postcard';
 
+
 function PostsList() {
   const [posts, setPosts] = useState([]);
 
@@ -25,6 +26,7 @@ function PostsList() {
       console.error('Error fetching posts:', error);
     }
   };
+  
 
   return (
     <div>
