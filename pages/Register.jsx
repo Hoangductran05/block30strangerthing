@@ -17,6 +17,7 @@ export default function Register() {
           setError('Register successful');
           setEmail('');
           setPassword('');
+          setName('');
         }
       };
 
@@ -27,7 +28,7 @@ export default function Register() {
         <div className='form-containter'>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='name'>Full name</label>
-                <input value={name} name="name" id='name' placeholder='Enter your full name here ...' type="text" />
+                <input value={name} name="name" id='name' placeholder='Enter your full name here ...' type="text" onChange={(e) => setName(e.target.value)} required />
 
                     <div className="mb-3">
                       <label htmlFor="email" className="form-label mb-3">
