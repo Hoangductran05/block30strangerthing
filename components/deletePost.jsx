@@ -6,7 +6,7 @@ import PostsList from './allposts';
 
 const DeletePost = () => {
     const [posts, setPosts] = useState([]);
-    const deletePost = (postId) => {
+    const deletePost = async (postId) => {
         // Send a DELETE request to delete the post
         fetch(`${Base_Api}/posts/${postId}`, {
           method: 'DELETE'
