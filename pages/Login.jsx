@@ -27,7 +27,7 @@ const Login = () => {
               <div className="card">
                 <div className="card-body p-5">
                   <h2 className="text-center">LOGIN</h2>
-                  <p className="text-center mb-4">Welcome Back!!</p>
+                  
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <label htmlFor="email" className="form-label mb-3">
@@ -60,15 +60,11 @@ const Login = () => {
                     {error && (
                       <div className="alert alert-danger">{error}</div>
                     )}
-                    <div className="mb-3">
-                      <Link to="/forgotpasword" className="form-link">
-                        Forgot password?
-                      </Link>
-                    </div>
+                   
                     <div className="d-flex justify-content-between align-items-center mb-3">
                       <p className='m-0'>Dont have an account?</p>
                       <Link to="/register" className="form-link">
-                        Sign up
+                        Register
                       </Link>
                     </div>
                     <div className="d-grid gap-2">
