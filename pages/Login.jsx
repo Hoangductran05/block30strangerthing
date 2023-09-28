@@ -20,13 +20,13 @@ const Login = () => {
   };
 
   return (
-    <section className="login-wrapper p-5">
+    <div className='form-containter'>
       <div className="container-xxl">
         <div className="row justify-content-center">
           <div className="col-lg-4 col-md-8 col-sm-10">
               <div className="card">
                 <div className="card-body p-5">
-                  <h2 className="text-center">LOGIN</h2>
+                  <h1 className="text-center">LOGIN</h1>
                   
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -61,12 +61,10 @@ const Login = () => {
                       <div className="alert alert-danger">{error}</div>
                     )}
                    
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <p className='m-0'>Dont have an account?</p>
-                      <Link to="/register" className="form-link">
-                        Register
-                      </Link>
-                    </div>
+                   
+                      <p >Dont have an account? <Link to="/register"> Register </Link> </p>
+                      
+                    
                     <div className="d-grid gap-2">
                       <button type="submit">Login</button>
                     </div>
@@ -76,7 +74,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

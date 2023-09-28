@@ -62,3 +62,10 @@
   margin-left: 20px;
   font-size: 25px;
 }
+
+.main-section {
+  text-align: center;
+  display: flex;
+  color: aqua;
+  align-items: center;
+}

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Register() {
     const [email, setEmail] = useState('');
@@ -22,6 +23,8 @@ export default function Register() {
 
     return(
         <>
+        <h1 className="text-center">REGISTER</h1>
+        <div className='form-containter'>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='name'>Full name</label>
                 <input value={name} name="name" id='name' placeholder='Enter your full name here ...' type="text" />
@@ -58,12 +61,17 @@ export default function Register() {
                       <div className="alert alert-danger">{error}</div>
                     )}
                    
-                  
+                   <p>Already have an account? <Link to="/login" >
+                        Login
+                      </Link>
+                      </p>
+                      
                    
                     <div className="d-grid gap-2">
-                      <button type="submit">Login</button>
+                      <button type="submit">Register</button>
                     </div>
                   </form>
+                  </div>
         </>
     )
 }
